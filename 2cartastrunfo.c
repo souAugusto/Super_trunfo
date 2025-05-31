@@ -3,10 +3,12 @@
 #ifdef _WIN32
 #include <windows.h>
 #endif
+// queria que o codigo fosse capaz ler caracteres especiais
 
 int main() {
     #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
+    // aqui procurei codigos para facilicar a leitura de caracteres
     #endif
     // Carta 1
     char codigo[50], estado[10], cidade[30];
