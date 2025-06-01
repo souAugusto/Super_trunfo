@@ -3,13 +3,13 @@
 #ifdef _WIN32
 #include <windows.h>
 #endif
-// queria que o codigo fosse capaz ler caracteres especiais
+// queria que o código fosse capaz de ler caracteres especiais
 
 int main() {
     #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
-    // aqui procurei codigos para facilicar a leitura de caracteres
     #endif
+
     // Carta 1
     char codigo[50], estado[10], cidade[30];
     int popula, ponto;
@@ -56,6 +56,12 @@ int main() {
     printf("Número de pontos turísticos: ");
     scanf("%d", &ponto2);
 
+    // Cálculo das métricas
+    float densidade = popula / area;
+    float pibper = (pib * 1000000) / popula; // Convertendo para reais
+    float densidade2 = popula2 / area2;
+    float pibper2 = (pib2 * 1000000) / popula2;
+
     // Exibição formatada
     printf("\n\n================= CARTA 1 =================\n");
     printf("📍 Estado: %s\n", estado);
@@ -64,6 +70,8 @@ int main() {
     printf("👥 População: %d habitantes\n", popula);
     printf("📏 Área: %.2f km²\n", area);
     printf("💰 PIB: R$ %.2f milhões\n", pib);
+    printf("💵 PIB per capita: R$ %.2f\n", pibper);
+    printf("📊 Densidade populacional: %.2f hab/km²\n", densidade);
     printf("🏞️ Pontos turísticos: %d\n", ponto);
 
     printf("\n================= CARTA 2 =================\n");
@@ -73,6 +81,8 @@ int main() {
     printf("👥 População: %d habitantes\n", popula2);
     printf("📏 Área: %.2f km²\n", area2);
     printf("💰 PIB: R$ %.2f milhões\n", pib2);
+    printf("💵 PIB per capita: R$ %.2f\n", pibper2);
+    printf("📊 Densidade populacional: %.2f hab/km²\n", densidade2);
     printf("🏞️ Pontos turísticos: %d\n", ponto2);
 
     printf("\n===========================================\n");
