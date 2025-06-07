@@ -61,6 +61,7 @@ int main() {
     float pibper = (pib * 1000000) / popula; // Convertendo para reais
     float densidade2 = popula2 / area2;
     float pibper2 = (pib2 * 1000000) / popula2;
+    
 
     // Exibição formatada
     printf("\n\n================= CARTA 1 =================\n");
@@ -84,8 +85,41 @@ int main() {
     printf("💵 PIB per capita: R$ %.2f\n", pibper2);
     printf("📊 Densidade populacional: %.2f hab/km²\n", densidade2);
     printf("🏞️ Pontos turísticos: %d\n", ponto2);
+    
 
     printf("\n===========================================\n");
-
-    return 0;
-}
+    
+    printf("\n================= Batalha =================\n");
+    // Comparação começa aqui
+    float superpor1 = popula + area + pib + pibper + (1000.0 / densidade) + ponto;
+float superpor2 = popula2 + area2 + pib2 + pibper2 + (1000.0 / densidade2) + ponto2;
+    
+    if(popula > popula2) {	printf("carta 1 venceu população!\n"); }
+    else if(popula<popula2) {  printf("carta 2 venceu população!\n");	}
+    else { printf("empate na população!\n");	}
+    	
+        if(area> area2) {	printf("carta 1 venceu area!\n"); }
+    else if(area<area2) {  printf("carta 2 venceu area!\n");	}
+    else { printf("empate na area!\n");	}	
+    	
+        if(pib > pib2) {	printf("carta 1 venceu pib!\n"); }
+    else if(pib<pib2) {  printf("carta 2 venceu pib!\n");	}
+    else { printf("empate no pib!\n");	}	
+    	
+        if(pibper> pibper2) {	printf("carta 1 venceu pib per capita!\n"); }
+    else if(pibper<pibper2) {  printf("carta 2 venceu pib per capita!\n");	}
+    else { printf("empate pib per capita!\n");	}	
+    	    
+    	    if(densidade2 > densidade) {	printf("carta 1 venceu densidade!\n"); }
+    else if(densidade2<densidade) {  printf("carta 2 venceu densidade!\n");	}
+    else { printf("empate na densidade!\n");	}
+        
+        if(ponto> ponto2) {	printf("carta 1 venceu ponto!\n"); }
+    else if(ponto<ponto2) {  printf("carta 2 venceu ponto!\n");	}
+    else { printf("empate no ponto!\n");	}
+      
+    if(superpor1 > superpor2) {	printf("carta 1 tem o maior super poder!\n"); }
+    else if(popula<popula2) {  printf("carta 2 tem o maior super poder!\n");	}
+    else { printf("empate no super poder!\n");	}
+    
+    return 0; } 
